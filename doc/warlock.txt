@@ -1,0 +1,66 @@
+*vim-warlock.txt* Yet another dark colorscheme for vim     *vim-warlock* *warlock*
+
+
+         ▌ ▐·▪   • ▌ ▄ ·.   ▄▄▌ ▐ ▄▌ ▄▄▄· ▄▄▄  ▄▄▌         ▄▄· ▄ •▄
+        ▪█·█▌██  ·██ ▐███▪  ██· █▌▐█▐█ ▀█ ▀▄ █·██•   ▄█▀▄ ▐█ ▌▪█▌▄▌▪
+        ▐█▐█•▐█· ▐█ ▌▐▌▐█·  ██▪▐█▐▐▌▄█▀▀█ ▐▀▀▄ ██ ▪ ▐█▌.▐▌██ ▄▄▐▀▀▄·
+         ███ ▐█▌ ██ ██▌▐█▌  ▐█▌██▐█▌▐█▪ ▐▌▐█•█▌▐█▌ ▄▐█▌.▐▌▐███▌▐█.█▌
+        . ▀  ▀▀▀ ▀▀  █▪▀▀▀   ▀▀▀▀ ▀▪ ▀  ▀ .▀  ▀.▀▀▀  ▀█▄▀▪·▀▀▀ ·▀  ▀
+
+                             Version 0.1.0-alpha ~
+
+==============================================================================
+INTRODUCTION                                  *vim-warlock-intro* *warlock-intro*
+
+A dark colorscheme with support for many languages, themes for vim-airline
+and lightline.vim, and the following plugins.
+
+    * Plugins
+        - CtrlP
+        - fzf.vim
+        - majutsushi/tagbar
+        - Netrw
+        - scrooloose/nerdtree
+        - vim-exchange
+        - vim-gitgutter
+        - vim-task
+        - vimtex
+
+==============================================================================
+REQUIREMENTS                                         *vim-warlock-requirements*
+
+This colorscheme has no requirements.
+
+==============================================================================
+CONFIGURATION                                     *vim-warlock-configuration*
+
+Name                        Default     Description~
+g:warlock#debug             0           Used for debugging the colorscheme.
+
+g:warlock#bold              1           Enable all bold highlights.
+
+g:warlcok#italic            1           Enable all italic highlights.
+
+g:warlock#underline         1           Enable all underline highlights.
+
+g:warlock#undercurl         1           Enable all undercurl highlights.
+
+g:warlock#italic_strings    1           Highlight strings as italic.
+
+==============================================================================
+CONTRIBUTIONS                                     *vim-warlock-contributions*
+
+Contributions through pull requests are always welcome. Please see
+CONTRIBUTING.md for details on how to contribute.
+
+==============================================================================
+AUTHOR                                                   *vim-warlock-author*
+
+Alexander Asp Bock (https://github.com/MisanthropicBit/vim-warlock).
+
+==============================================================================
+LICENSE                                                 *vim-warlock-license*
+
+BSD 3-Clause License. Copyright © 2020 Alexander Asp Bock
+
+ vim:tw=78:ts=8:ft=help:norl:
