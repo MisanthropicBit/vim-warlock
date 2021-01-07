@@ -892,6 +892,10 @@ HiLink NERDTreeHelpTitle Title
 HiLink NERDTreeLinkFile Blue
 HiLink NERDTreeLinkTarget Pink
 " }}}
+"
+" gitmessenger.vim {{{
+HiLink gitmessengerHash Yellow
+" }}}
 " }}}
 
 delcommand HiLink
