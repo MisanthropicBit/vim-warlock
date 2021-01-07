@@ -815,6 +815,7 @@ HiLink ALEInfoSign    ALEInfo
 " }}}
 
 " fugitive.vim {{{
+HiLink fugitiveHeader           Brown
 HiLink fugitiveUntrackedHeading DarkRed
 HiLink fugitiveUnstagedHeading  Yellow
 HiLink fugitiveStagedHeading    Orange
