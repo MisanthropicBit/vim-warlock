@@ -210,6 +210,16 @@ call s:Highlight('Quote',           s:palette.lightgreen, s:palette.none)
 call s:Highlight('Underlined',      s:palette.fg0,        s:palette.none, s:underline)
 call s:Highlight('WarningMsg',      s:palette.bg0,        s:palette.orange)
 
+" Neovim/vim specific highlights
+if has('nvim')
+    call s:Highlight('NormalFloat', s:palette.none, s:palette.bg1)
+    call s:Highlight('TermCursor', s:palette.none, s:palette.none, 'reverse')
+    call s:Highlight('TermCursorNC', s:palette.purple, s:palette.none, 'reverse')
+else
+    "call s:Highlight('StatusLineTerm', s:palette.red, s:palette.none)
+    "call s:Highlight('StatusLineTermNC', , )
+endif
+
 " Short-cut command for linking highlight groups
 command! -buffer -nargs=+ HiLink highlight! link <args>
 
