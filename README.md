@@ -16,6 +16,8 @@
 
 ---
 
+## Install
+
 Install via `git` or use your favorite plugin manager.
 
 ```bash
@@ -28,3 +30,15 @@ highlighting, install [vim-polyglot](https://github.com/sheerun/vim-polyglot) or
 a subset of the language packs that it uses.
 
 Do `set termguicolors` in your vimrc to enable 24-bit colors.
+
+## Configuration
+
+Please see [the docs](doc/warlock.txt).
+
+## Screenshots
+
+### Python (with [python-syntax](https://github.com/vim-python/python-syntax))
+
+<div align="center">
+  <img alt="python screenshot" src="screenshots/python.png" width="80%" />
+</div>
