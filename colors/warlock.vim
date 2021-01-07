@@ -786,6 +786,16 @@ HiLink fishCommandSub Red
 " }}}
 
 " Plugins: {{{
+" ALE {{{
+call s:Highlight('ALEError', s:palette.red, s:palette.none, s:undercurl)
+call s:Highlight('ALEWarning', s:palette.orange, s:palette.none, s:undercurl)
+call s:Highlight('ALEInfo', s:palette.blue, s:palette.none, s:undercurl)
+
+HiLink ALEErrorSign   ALEError
+HiLink ALEWarningSign ALEWarning
+HiLink ALEInfoSign    ALEInfo
+" }}}
+
 " fzf.vim {{{
 "HiLink fzf1 Purple
 "HiLink fzf2 DarkPurple
