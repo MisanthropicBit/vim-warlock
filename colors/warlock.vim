@@ -1,3 +1,5 @@
+" vim: foldmethod=marker
+
 scriptencoding utf-8
 
 if v:version > 580
