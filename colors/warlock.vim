@@ -234,10 +234,10 @@ command! -buffer -nargs=+ HiLink highlight! link <args>
 "diffLine
 
 " gitcommit {{{
-HiLink gitcommitHeader        Yellow
+HiLink gitcommitHeader        Cyan
 HiLink gitcommitSelectedFile  Green
-HiLink gitcommitDiscardedFile Red
-HiLink gitcommitUntrackedFile Purple
+HiLink gitcommitDiscardedFile Yellow
+HiLink gitcommitUntrackedFile Red
 " }}}
 
 " html {{{
