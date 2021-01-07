@@ -336,33 +336,30 @@ HiLink cppModifier Brown
 " }}}
 
 " Python {{{
+" Syntax groups from vim's python.vim
+HiLink pythonAsync         Red
 HiLink pythonBuiltin       Red
-HiLink pythonBuiltinObj    Red
 HiLink pythonBuiltinFunc   Red
-"pythonFunction
 HiLink pythonDecorator     Yellow
-HiLink pythonDecoratorName Orange
-"pythonInclude
-"pythonImport
-"pythonRun
-"pythonOperator
-"pythonExceptions
-"pythonBoolean
-"pythonDot
+HiLink pythonDecoratorName Red
+HiLink pythonExceptions    Exception
+HiLink pythonFunction      Function
 
 " From https://github.com/vim-python/python-syntax
-HiLink pythonCoding             Special
+HiLink pythonBoolean            Boolean
+HiLink pythonBuiltinObj         Red
+HiLink pythonBuiltinType        Red
 HiLink pythonClass              Yellow
 HiLink pythonClassVar           Identifier
-HiLink pythonExClass            Exception
-HiLink pythonBuiltinType        Red
+HiLink pythonCoding             Special
+HiLink pythonDot                Pink
 HiLink pythonDottedName         Red
-HiLink pythonRaiseFromStatement Yellow
+HiLink pythonExClass            Exception
 HiLink pythonImport             Orange
-"HiLink pythonStatement          Purple
+HiLink pythonRaiseFromStatement Yellow
+
 "call s:Highlight('pythonIndentError', s:palette.none, s:palette.darkred, s:undercurl)
 "call s:Highlight('pythonNumberError', s:palette.pink, s:palette.red)
-
 "HiLink pythonNumberError Red
 " }}}
 
