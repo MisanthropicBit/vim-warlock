@@ -107,6 +107,9 @@ endfunction
 
 let s:style_idx = &background == 'light'
 
+" Short-cut command for linking highlight groups
+command! -buffer -nargs=+ HiLink highlight! link <args>
+
 " Colors from the palette
 call s:Highlight('None',       s:palette.none,       s:palette.none)
 call s:Highlight('Fg0',        s:palette.fg0,        s:palette.none)
@@ -137,23 +140,29 @@ call s:Highlight('Conceal',      s:palette.gray,   s:palette.none)
 call s:Highlight('Cursor',       s:palette.purple, s:palette.purple)
 call s:Highlight('CursorColumn', s:palette.purple, s:palette.bg2)
 call s:Highlight('CursorLine',   s:palette.none,   s:palette.bg2)
+" CursorIM
 call s:Highlight('CursorLineNr', s:palette.green,  s:palette.bg1)
 call s:Highlight('Directory',    s:palette.orange, s:palette.none)
 call s:Highlight('FoldColumn',   s:palette.fg0,    s:palette.bg1)
 call s:Highlight('Folded',       s:palette.fg0,    s:palette.bg1)
 call s:Highlight('LineNr',       s:palette.blue,   s:palette.bg0)
-call s:Highlight('MatchParen',   s:palette.fg0,    s:palette.purple)
+call s:Highlight('MatchParen',   s:palette.fg0,    s:palette.darkpurple)
+call s:Highlight('ModeMsg',      s:palette.pink,   s:palette.none)
+"call s:Highlight('MsgArea',     s:palette.pink,   s:palette.none)
+"call s:Highlight('MsgSeparator',s:palette.pink,   s:palette.none)
+"call s:Highlight('MoreMsg',s:palette.pink,   s:palette.none)
 call s:Highlight('Normal',       s:palette.fg1,    s:palette.bg0)
 call s:Highlight('Pmenu',        s:palette.none,   s:palette.darkpurple)
 call s:Highlight('PmenuSel',     s:palette.none,   s:palette.purple)
 call s:Highlight('PmenuSbar',    s:palette.none,   s:palette.blue)
-"call s:Highlight('QuickFixLine', s:palette., s:palette.)
+call s:Highlight('QuickFixLine', s:palette.none,   s:palette.darkpurple)
 call s:Highlight('PmenuThumb',   s:palette.none,   s:palette.purple)
 call s:Highlight('TabLine',      s:palette.none,   s:palette.purple)
 call s:Highlight('TabLineFill',  s:palette.none,   s:palette.purple)
 call s:Highlight('TabLineSel',   s:palette.none,   s:palette.yellow)
 call s:Highlight('VertSplit',    s:palette.none,   s:palette.bg2)
 call s:Highlight('Visual',       s:palette.none,   s:palette.darkpurple)
+"call s:Highlight('VisualNOS',    s:palette.none,   s:palette.darkpurple)
 call s:Highlight('WildMenu',     s:palette.bg0,    s:palette.fg0)
 
 " Diff
@@ -184,22 +193,24 @@ call s:Highlight('IncSearch',       s:palette.yellow,     s:palette.none)
 call s:Highlight('Keyword',         s:palette.orange,     s:palette.none)
 call s:Highlight('Label',           s:palette.darkred,    s:palette.none)
 call s:Highlight('Macro',           s:palette.lightgreen, s:palette.none)
+call s:Highlight('NonText',         s:palette.darkred,    s:palette.none)
 call s:Highlight('Number',          s:palette.pink,       s:palette.none)
 call s:Highlight('Operator',        s:palette.yellow,     s:palette.none)
 call s:Highlight('PreCondit',       s:palette.lightgreen, s:palette.none)
 call s:Highlight('PreProc',         s:palette.lightgreen, s:palette.none)
 call s:Highlight('Question',        s:palette.cyan,       s:palette.none)
 call s:Highlight('Repeat',          s:palette.cyan,       s:palette.none)
-"call s:Highlight('SignColumn',      s:palette.,           s:palette.none)
+call s:Highlight('SignColumn',      s:palette.none,       s:palette.bg0)
 call s:Highlight('Search',          s:palette.bg0,        s:palette.yellow)
 call s:Highlight('Special',         s:palette.brown,      s:palette.none)
+call s:Highlight('SpecialKey',      s:palette.cyan,       s:palette.none)
 call s:Highlight('SpellBad',        s:palette.darkred,    s:palette.none, s:undercurl)
 call s:Highlight('SpellCap',        s:palette.yellow,     s:palette.none, s:undercurl)
 call s:Highlight('SpellLocal',      s:palette.blue,       s:palette.none, s:undercurl)
 call s:Highlight('SpellRare',       s:palette.brown,      s:palette.none, s:undercurl)
 call s:Highlight('StatusLine',      s:palette.none,       s:palette.purple)
-call s:Highlight('StorageClass',    s:palette.red,       s:palette.none)
-"call s:Highlight('StatusLineNC',    s:palette.none,       s:palette.purple)
+call s:Highlight('StatusLineNC',    s:palette.none,       s:palette.darkpurple)
+call s:Highlight('StorageClass',    s:palette.red,        s:palette.none)
 call s:Highlight('Statement',       s:palette.purple,     s:palette.none)
 call s:Highlight('String',          s:palette.green,      s:palette.none, s:italic)
 call s:Highlight('StringDelimiter', s:palette.green,      s:palette.none, s:italic)
@@ -212,6 +223,10 @@ call s:Highlight('Quote',           s:palette.lightgreen, s:palette.none)
 call s:Highlight('Underlined',      s:palette.fg0,        s:palette.none, s:underline)
 call s:Highlight('WarningMsg',      s:palette.bg0,        s:palette.orange)
 
+" Linked groups
+HiLink Substitute Search
+HiLink qfLineNr   Cyan
+
 " Neovim/vim specific highlights
 if has('nvim')
     call s:Highlight('NormalFloat', s:palette.none, s:palette.bg1)
@@ -221,9 +236,6 @@ else
     "call s:Highlight('StatusLineTerm', s:palette.red, s:palette.none)
     "call s:Highlight('StatusLineTermNC', , )
 endif
-
-" Short-cut command for linking highlight groups
-command! -buffer -nargs=+ HiLink highlight! link <args>
 
 " Diff {{{
 "diffAdded
