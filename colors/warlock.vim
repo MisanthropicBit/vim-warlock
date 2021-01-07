@@ -814,6 +814,14 @@ HiLink ALEWarningSign ALEWarning
 HiLink ALEInfoSign    ALEInfo
 " }}}
 
+" fugitive.vim {{{
+HiLink fugitiveUntrackedHeading DarkRed
+HiLink fugitiveUnstagedHeading  Yellow
+HiLink fugitiveStagedHeading    Orange
+HiLink fugitiveHeading          Green
+HiLink fugitiveHash             Purple
+" }}}
+
 " fzf.vim {{{
 "HiLink fzf1 Purple
 "HiLink fzf2 DarkPurple
