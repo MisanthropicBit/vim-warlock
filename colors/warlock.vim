@@ -257,16 +257,9 @@ call s:Highlight('htmlBold', s:palette.none, s:palette.none, s:bold)
 call s:Highlight('htmlBoldItalic', s:palette.none, s:palette.none, s:bold, s:italic)
 call s:Highlight('htmlItalic', s:palette.none, s:palette.none, s:italic)
 
-"htmlTag
-"htmlEndTag
-"htmlTagName
-"htmlTag
-"htmlArg
-"htmlScriptTag
-"htmlTagN
-"htmlSpecialTagName
-"htmlLink
-"htmlSpecialChar
+HiLink htmlEndTag      DarkRed
+HiLink htmlArg         Orange
+HiLink htmlSpecialChar Red
 " }}}
 
 " css {{{
