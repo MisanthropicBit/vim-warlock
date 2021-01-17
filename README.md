@@ -40,5 +40,5 @@ Please see [the docs](doc/warlock.txt).
 ### Python (with [python-syntax](https://github.com/vim-python/python-syntax))
 
 <div align="center">
-  <img alt="python screenshot" src="screenshots/python.png" width="80%" />
+  <img alt="python screenshot" src="screenshots/python.png" width="60%" />
 </div>
