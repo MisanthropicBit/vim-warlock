@@ -17,22 +17,12 @@ let g:colors_name = 'warlock'
 " Configuration {{{
 " Load a configuration variable {{{
 function! s:load_config_var(name, default, set_script_local) abort
-    let config_var = g:colors_name . '#' . a:name
-    let type = get({
-        \0: '%d',
-        \1: "'%s'",
-        \5: '%f',
-        \6: '%d',
-    \}, a:default, "'%s'")
-
-    let load = printf("let g:%s = get(g:, '%s', %s)", config_var, config_var, type)
-
-    " Set global variable
-    execute printf(load, a:default)
+    let g:{g:colors_name}#{a:name} = get(g:, g:colors_name . '#' . a:name, a:default)
 
     " Set script-local variable initialised from global counterpart
     if a:set_script_local
-        execute printf("let s:%s = %s == 1 ? '%s' : ''", a:name, 'g:' . config_var, a:name)
+        let enabled = g:{g:colors_name}#{a:name}
+        let s:{a:name} = enabled == 1 ? a:name : ''
     endif
 endfunction
 " }}}
