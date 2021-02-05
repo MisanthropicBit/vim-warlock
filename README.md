@@ -42,3 +42,52 @@ Please see [the docs](doc/warlock.txt).
 <div align="center">
   <img alt="python screenshot" src="screenshots/python.png" width="60%" />
 </div>
+
+## Language Support
+
+* bash
+* C
+* C#
+* C++
+* CMake
+* css
+* fish shell
+* Haskell
+* html
+* Java
+* JavaScript
+* JSON
+* JSX
+* Kotlin
+* Lua
+* Make
+* Markdown
+* MoonScript
+* Perl
+* Python
+* ReStructuredText
+* Rust
+* Scala
+* Toml
+* TSX
+* TypeScript
+* vim
+* xml
+* Yaml
+
+## Plugin Support
+
+* Airline
+* ALE
+* ctrlp.vim
+* Deoplete
+* fugitive.vim
+* fzf.vim
+* gitmessenger.vim
+* limelight.vim
+* nerdtree
+* Netrw
+* tagbar
+* vim-exchange
+* vim-task
+* vimtex
