@@ -156,10 +156,10 @@ call s:Highlight('Visual',       s:palette.none,   s:palette.darkpurple)
 call s:Highlight('WildMenu',     s:palette.bg0,    s:palette.fg0)
 
 " Diff
-call s:Highlight('DiffAdd',    s:palette.none,   s:palette.darkgreen)
-call s:Highlight('DiffDelete', s:palette.none,   s:palette.darkred)
-call s:Highlight('DiffChange', s:palette.none,   s:palette.yellow)
-call s:Highlight('DiffText',   s:palette.orange, s:palette.none)
+call s:Highlight('DiffAdd',    s:palette.none, s:palette.darkgreen)
+call s:Highlight('DiffDelete', s:palette.none, s:palette.darkred)
+call s:Highlight('DiffChange', s:palette.none, s:palette.darkpurple)
+call s:Highlight('DiffText',   s:palette.pink, s:palette.darkpurple)
 
 " Language elements
 call s:Highlight('Boolean',         s:palette.yellow,     s:palette.none)
@@ -228,12 +228,10 @@ else
 endif
 
 " Diff {{{
-"diffAdded
-"diffRemoved
-"diffChanged
-"diffFile
-"diffNewFile
-"diffLine
+HiLink diffAdded        Green
+HiLink diffRemoved      Red
+HiLink diffChanged      Orange
+" }}}
 
 " gitcommit {{{
 HiLink gitcommitHeader        Cyan
@@ -321,11 +319,13 @@ HiLink xmlEqual Operator
 HiLink vimUserFunc   Function
 HiLink vimNotFunc    Conditional
 HiLink vimFunction   Red
+HiLink vimParenSep   LightBlue
 HiLink vimVar        Brown
 HiLink vimSet        LightBlue
 HiLink vimSetEqual   LightBlue
 HiLink vimAugroupKey Yellow
 HiLink vimFuncVar    Orange
+HiLink vimMap        LightGreen
 " }}}
 
 " C {{{
@@ -338,6 +338,8 @@ HiLink cppModifier Brown
 " }}}
 
 " c# (https://github.com/nickspoons/vim-cs) {{{
+HiLink csModifier Red
+HiLink csTypeDecleration Yellow
 "HiLink csUnspecifiedStatement PurpleItalic
 "HiLink csStorage RedItalic
 "HiLink csClass RedItalic
@@ -614,6 +616,7 @@ call s:Highlight('markdownLinkText', s:palette.blue, s:palette.none, s:underline
 " }}}
 
 " vimtex: {{{
+HiLink texDocTypeArgs Special
 " }}}
 
 " Haskell {{{
@@ -873,8 +876,10 @@ HiLink fugitiveHash             Purple
 " vim-task {{{
 HiLink TaskUri         Green
 HiLink DueTag          Pink
+HiLink TaskTodo        Brown
 HiLink DoneSymbol      LightGreen
 HiLink CancelledSymbol DarkRed
+HiLink TaskTag         LightBlue
 HiLink LowTag          Blue
 HiLink MediumTag       Yellow
 HiLink HighTag         Orange

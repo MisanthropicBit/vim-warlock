@@ -17,8 +17,10 @@ endfunction
 " }}}
 
 if has('autocmd') && exists('##ColorScheme')
-    augroup SetWarlockStatusLineThemes
-        autocmd!
-        autocmd ColorScheme warlock call s:SetStatusLineThemes(<afile>, <amatch>)
-    augroup END
+    if get(g:, 'warlock#auto_set_status_line_themes', 0)
+        augroup SetWarlockStatusLineThemes
+            autocmd!
+            autocmd ColorScheme warlock call s:SetStatusLineThemes(<afile>, <amatch>)
+        augroup END
+    endif
 endif
