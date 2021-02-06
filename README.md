@@ -71,7 +71,6 @@ Please see [the docs](doc/warlock.txt).
 * Python
 * ReStructuredText
 * Rust
-* Scala
 * Toml
 * TSX
 * TypeScript

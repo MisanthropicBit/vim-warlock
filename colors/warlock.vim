@@ -592,10 +592,6 @@ HiLink luaFunctionBlock Orange
 "HiLink ktKeyword Cyan
 " }}}
 
-" Scala {{{
-
-" }}}
-
 " Markdown {{{
 HiLink markdownH1                Purple
 HiLink markdownH2                Purple
