@@ -28,6 +28,7 @@ endfunction
 " }}}
 
 call s:load_config_var('debug', 0, 0)
+call s:load_config_var('auto_set_status_line_themes', 1, 0)
 call s:load_config_var('bold', 1, 1)
 call s:load_config_var('italic', 1, 1)
 call s:load_config_var('underline', 1, 1)
