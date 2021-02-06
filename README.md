@@ -12,8 +12,9 @@
     </a>
     <img src="https://img.shields.io/badge/compatible-neovim-blueviolet" />
   </div>
+  <br />
   <div>
-    <img style="margin-top: 30px;" width="80%" src="vim-warlock-palette.svg" />
+    <img width="80%" src="vim-warlock-palette.svg" />
   </div>
 </div>
 
