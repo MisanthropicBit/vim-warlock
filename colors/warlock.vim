@@ -584,7 +584,7 @@ HiLink luaFunctionBlock Orange
 
 " }}}
 
-" Kotlin: (https://github.com/udalov/kotlin-vim) {{{
+" Kotlin (https://github.com/udalov/kotlin-vim) {{{
 "HiLink ktSimpleInterpolation Yellow
 "HiLink ktComplexInterpolation Yellow
 "HiLink ktComplexInterpolationBrace Yellow
@@ -611,11 +611,11 @@ HiLink markdownListMarker        Cyan
 call s:Highlight('markdownLinkText', s:palette.blue, s:palette.none, s:underline)
 " }}}
 
-" ReStructuredText: {{{
+" ReStructuredText {{{
 HiLink rstExDirective Cyan
 " }}}
 
-" vimtex: {{{
+" vimtex {{{
 HiLink texDocTypeArgs Special
 " }}}
 
@@ -656,11 +656,11 @@ HiLink jsonQuote   Green
 HiLink jsonNull    Red
 " }}}
 
-" Yaml: {{{
+" Yaml {{{
 HiLink yamlPlainScalar Normal
 " }}}
 
-" Toml: {{{
+" Toml {{{
 "call s:Highlight('tomlTable', s:palette.purple, s:palette.none, 'bold')
 "HiLink tomlKey Orange
 "HiLink tomlBoolean Cyan
@@ -686,7 +686,7 @@ HiLink makeTarget Purple
 HiLink makeSpecTarget DarkRed
 " }}}
 
-" CMake: {{{
+" CMake {{{
 "HiLink cmakeCommand Orange
 "HiLink cmakeKWconfigure_package_config_file Yellow
 "HiLink cmakeKWwrite_basic_package_version_file Yellow
@@ -802,7 +802,7 @@ HiLink cmakeGeneratorExpressions Operator
 HiLink fishCommandSub Red
 " }}}
 
-" Plugins: {{{
+" Plugins {{{
 " ALE {{{
 call s:Highlight('ALEError',   s:palette.red,    s:palette.none, s:undercurl)
 call s:Highlight('ALEWarning', s:palette.orange, s:palette.none, s:undercurl)
@@ -903,7 +903,7 @@ HiLink NERDTreeLinkTarget Pink
 HiLink NERDTreeOpenable   Green
 HiLink NERDTreeClosable   DarkRed
 " }}}
-"
+
 " gitmessenger.vim {{{
 HiLink gitmessengerHash Yellow
 " }}}
