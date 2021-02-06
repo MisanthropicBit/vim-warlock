@@ -229,9 +229,11 @@ else
 endif
 
 " Diff {{{
-HiLink diffAdded        Green
-HiLink diffRemoved      Red
-HiLink diffChanged      Orange
+HiLink diffAdded   Green
+HiLink diffRemoved Red
+HiLink diffChanged Orange
+HiLink diffLine    Cyan
+HiLink diffSubname Yellow
 " }}}
 
 " gitcommit {{{
@@ -330,8 +332,9 @@ HiLink vimMap        LightGreen
 " }}}
 
 " C {{{
-"cOperator
-"cStructure
+call s:Highlight('cFormat', s:palette.brown, s:palette.none, s:italic)
+HiLink cLabel     Red
+HiLink cUserLabel Red
 " }}}
 
 " C++ {{{
