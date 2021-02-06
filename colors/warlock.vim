@@ -344,14 +344,9 @@ HiLink cppModifier Brown
 " c# (https://github.com/nickspoons/vim-cs) {{{
 HiLink csModifier Red
 HiLink csTypeDecleration Yellow
-"HiLink csUnspecifiedStatement PurpleItalic
-"HiLink csStorage RedItalic
-"HiLink csClass RedItalic
-"HiLink csNewType Cyan
-"HiLink csContextualStatement PurpleItalic
-"HiLink csInterpolationDelimiter Yellow
-"HiLink csInterpolation Yellow
-"HiLink csEndColon Fg
+HiLink csBraces Delimiter
+HiLink csNew LightGreen
+HiLink csLabel Yellow
 " }}}
 
 " Python {{{
@@ -384,8 +379,10 @@ HiLink pythonRaiseFromStatement Yellow
 
 " Perl (https://github.com/vim-perl/vim-perl) {{{
 "HiLink perlStatementPackage PurpleItalic
-"HiLink perlStatementInclude PurpleItalic
-"HiLink perlStatementStorage Orange
+HiLink perlStatementInclude Orange
+HiLink perlStatementStorage Storage
+HiLink podCommand Special
+HiLink perlPod Comment
 "HiLink perlStatementList Orange
 "HiLink perlMatchStartEnd Orange
 "HiLink perlVarSimpleMemberName Cyan
@@ -600,23 +597,26 @@ HiLink luaFunctionBlock Orange
 " }}}
 
 " Markdown {{{
-HiLink markdownH1 Yellow
-HiLink markdownH2 Yellow
-HiLink markdownH3 Yellow
-HiLink markdownH4 Yellow
-HiLink markdownH5 Yellow
-HiLink markdownH6 Yellow
-HiLink markdownCode Brown
-HiLink markdownCodeBlock Brown
-HiLink markdownCodeDelimiter Brown
-HiLink markdownLinkDelimiter markdownUrl
+HiLink markdownH1                Purple
+HiLink markdownH2                Purple
+HiLink markdownH3                Purple
+HiLink markdownH4                Purple
+HiLink markdownH5                Purple
+HiLink markdownH6                Purple
+HiLink markdownHeadingDelimiter  Purple
+HiLink markdownCode              Brown
+HiLink markdownCodeBlock         Brown
+HiLink markdownCodeDelimiter     Brown
+HiLink markdownLinkDelimiter     markdownUrl
 HiLink markdownLinkTextDelimiter markdownLinkText
-HiLink markdownUrl Red
+HiLink markdownUrl               markdownLinkText
+HiLink markdownListMarker        Cyan
 
 call s:Highlight('markdownLinkText', s:palette.blue, s:palette.none, s:underline)
 " }}}
 
 " ReStructuredText: {{{
+HiLink rstExDirective Cyan
 " }}}
 
 " vimtex: {{{
@@ -624,6 +624,9 @@ HiLink texDocTypeArgs Special
 " }}}
 
 " Haskell {{{
+HiLink hsDelimiter Delimiter
+HiLink hsImport    Orange
+
 "HiLink haskellType SrceryBlue
 "HiLink haskellIdentifier SrceryBlue
 "HiLink haskellSeparator SrceryBlue
@@ -652,8 +655,9 @@ HiLink texDocTypeArgs Special
 " }}}
 
 " Json {{{
-HiLink jsonKeyword Blue
-HiLink jsonQuote Green
+HiLink jsonKeyword Cyan
+HiLink jsonQuote   Green
+HiLink jsonNull    Red
 " }}}
 
 " Yaml: {{{
@@ -668,18 +672,15 @@ HiLink yamlPlainScalar Normal
 " }}}
 
 " Rust (https://github.com/rust-lang/rust.vim) {{{
-"HiLink rustStructure Orange
-"HiLink rustIdentifier Purple
-"HiLink rustModPath Orange
-"HiLink rustModPathSep Grey
-"HiLink rustSelf Blue
-"HiLink rustSuper Blue
-"HiLink rustDeriveTrait PurpleItalic
-"HiLink rustEnumVariant Purple
-"HiLink rustMacroVariable Blue
-"HiLink rustAssert Cyan
-"HiLink rustPanic Cyan
-"HiLink rustPubScopeCrate PurpleItalic
+HiLink rustTrait         LightGreen
+HiLink rustStructure     Structure
+HiLink rustAttribute     Yellow
+HiLink rustDerive        Yellow
+HiLink rustEnum          Yellow
+HiLink rustEnumVariant   Yellow
+HiLink rustPanic         DarkRed
+HiLink rustAssert        Red
+HiLink rustPubScopeCrate Pink
 " }}}
 
 " Make {{{
@@ -807,13 +808,14 @@ HiLink fishCommandSub Red
 
 " Plugins: {{{
 " ALE {{{
-call s:Highlight('ALEError', s:palette.red, s:palette.none, s:undercurl)
+call s:Highlight('ALEError',   s:palette.red,    s:palette.none, s:undercurl)
 call s:Highlight('ALEWarning', s:palette.orange, s:palette.none, s:undercurl)
-call s:Highlight('ALEInfo', s:palette.blue, s:palette.none, s:undercurl)
+call s:Highlight('ALEInfo',    s:palette.blue,   s:palette.none, s:undercurl)
 
-HiLink ALEErrorSign   ALEError
-HiLink ALEWarningSign ALEWarning
-HiLink ALEInfoSign    ALEInfo
+HiLink ALEErrorSign       ALEError
+HiLink ALEWarningSign     ALEWarning
+HiLink ALEInfoSign        ALEInfo
+HiLink ALEErrorSignLineNr Red
 " }}}
 
 " fugitive.vim {{{
@@ -823,26 +825,26 @@ HiLink fugitiveUnstagedHeading  Yellow
 HiLink fugitiveStagedHeading    Orange
 HiLink fugitiveHeading          Green
 HiLink fugitiveHash             Purple
+HiLink fugitiveUnstagedModifier DarkRed
+HiLink fugitiveStagedModifier   Green
+HiLink fugitiveStagedModifier   Green
 " }}}
 
 " fzf.vim {{{
-"HiLink fzf1 Purple
-"HiLink fzf2 DarkPurple
-"HiLink fzf3 Purple
-"let g:fzf_colors = {
-"      \ 'fg':      ['fg', 'Normal'],
-"      \ 'bg':      ['bg', 'Normal'],
-"      \ 'hl':      ['fg', 'Green'],
-"      \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-"      \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-"      \ 'hl+':     ['fg', 'Cyan'],
-"      \ 'info':    ['fg', 'Cyan'],
-"      \ 'prompt':  ['fg', 'Orange'],
-"      \ 'pointer': ['fg', 'Blue'],
-"      \ 'marker':  ['fg', 'Yellow'],
-"      \ 'spinner': ['fg', 'Yellow'],
-"      \ 'header':  ['fg', 'Grey']
-"      \ }
+let g:fzf_colors = {
+    \'fg':      ['fg', 'Normal'],
+    \'bg':      ['bg', 'Normal'],
+    \'hl':      ['fg', 'Green'],
+    \'fg+':     ['fg', 'Red'],
+    \'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+    \'hl+':     ['fg', 'Cyan'],
+    \'info':    ['fg', 'Yellow'],
+    \'prompt':  ['fg', 'Blue'],
+    \'pointer': ['fg', 'LightGreen'],
+    \'marker':  ['fg', 'Yellow'],
+    \'spinner': ['fg', 'Yellow'],
+    \'header':  ['fg', 'Grey']
+\}
 " }}}
 
 " Netrw {{{
@@ -873,10 +875,6 @@ HiLink fugitiveHash             Purple
 "HiLink CtrlPPrtCursor Blue
 " }}}
 
-" vim-exchange {{{
-" ExchangeRegion
-" }}}
-
 " vim-task {{{
 HiLink TaskUri         Green
 HiLink DueTag          Pink
@@ -896,22 +894,18 @@ HiLink CriticalTag     Red
 " }}}
 
 " majutsushi/tagbar{{{
-"HiLink TagbarFoldIcon Green
-"HiLink TagbarSignature Green
-"HiLink TagbarKind Red
-"HiLink TagbarScope Orange
-"HiLink TagbarNestedKind Cyan
-"HiLink TagbarVisibilityPrivate Red
 HiLink TagbarVisibilityPublic Green
 " }}}
 
 " scrooloose/nerdtree{{{
-HiLink NERDTreeDir Green
-HiLink NERDTreeExecFile Yellow
-HiLink NERDTreeFlags Blue
-HiLink NERDTreeHelpTitle Title
-HiLink NERDTreeLinkFile Blue
+HiLink NERDTreeDir        Green
+HiLink NERDTreeExecFile   Yellow
+HiLink NERDTreeFlags      Blue
+HiLink NERDTreeHelpTitle  Title
+HiLink NERDTreeLinkFile   Blue
 HiLink NERDTreeLinkTarget Pink
+HiLink NERDTreeOpenable   Green
+HiLink NERDTreeClosable   DarkRed
 " }}}
 "
 " gitmessenger.vim {{{
