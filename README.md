@@ -92,5 +92,6 @@ Please see [the docs](doc/warlock.txt).
 * Netrw
 * tagbar
 * vim-exchange
+* vim-plug
 * vim-task
 * vimtex

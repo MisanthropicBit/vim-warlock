@@ -907,6 +907,12 @@ HiLink NERDTreeClosable   DarkRed
 " gitmessenger.vim {{{
 HiLink gitmessengerHash Yellow
 " }}}
+
+" vim-plug {{{
+HiLink plugName    Cyan
+HiLink plug2       Red
+HiLink plugMessage Yellow
+" }}}
 " }}}
 
 delcommand HiLink
