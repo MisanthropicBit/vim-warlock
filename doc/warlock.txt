@@ -15,17 +15,6 @@ INTRODUCTION                                  *vim-warlock-intro* *warlock-intro
 A dark colorscheme with support for many languages, themes for vim-airline
 and lightline.vim, and the following plugins.
 
-    * Plugins
-        - CtrlP
-        - fzf.vim
-        - majutsushi/tagbar
-        - Netrw
-        - scrooloose/nerdtree
-        - vim-exchange
-        - vim-gitgutter
-        - vim-task
-        - vimtex
-
 ==============================================================================
 REQUIREMENTS                                         *vim-warlock-requirements*
 
@@ -46,6 +35,58 @@ g:warlock#underline         1           Enable all underline highlights.
 g:warlock#undercurl         1           Enable all undercurl highlights.
 
 g:warlock#italic_strings    1           Highlight strings as italic.
+
+==============================================================================
+SUPPORTED LANGUAGES                                   *vim-warlock-languages*
+
+* bash
+* C
+* C#
+* C++
+* CMake
+* css
+* fish shell
+* Go
+* Haskell
+* html
+* Java
+* JavaScript
+* JSON
+* JSX
+* Kotlin
+* Lua
+* Make
+* Markdown
+* MoonScript
+* Perl
+* Python
+* ReStructuredText
+* Rust
+* Toml
+* TSX
+* TypeScript
+* vim
+* xml
+* Yaml
+
+==============================================================================
+SUPPORTED PLUGINS                                       *vim-warlock-plugins*
+
+* vim-airline
+* ale.vim
+* ctrlp.vim
+* deoplete.nvim
+* vim-fugitive
+* fzf.vim
+* git-messenger.vim
+* limelight.vim
+* nerdtree
+* Netrw
+* tagbar
+* vim-exchange
+* vim-plug
+* vim-task
+* vimtex
 
 ==============================================================================
 CONTRIBUTIONS                                     *vim-warlock-contributions*
