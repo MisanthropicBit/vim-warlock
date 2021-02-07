@@ -3,7 +3,8 @@
     <img width="80%" src="vim-warlock-logo.svg" />
   </div>
   <div>
-    <p><i>Yet another dark colorscheme for vim</i></p>
+    <p><i>Yet another dark colorscheme for vim — 24-bit and colorful</i></p>
+    <p><i></i></p>
   </div>
   <div>
     <img src="https://img.shields.io/badge/version-0.1.0--alpha-blue" />
