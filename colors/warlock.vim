@@ -160,7 +160,7 @@ call s:Highlight('WildMenu',     s:palette.bg0,    s:palette.fg0)
 call s:Highlight('DiffAdd',    s:palette.none, s:palette.darkgreen)
 call s:Highlight('DiffDelete', s:palette.none, s:palette.darkred)
 call s:Highlight('DiffChange', s:palette.none, s:palette.darkpurple)
-call s:Highlight('DiffText',   s:palette.pink, s:palette.darkpurple)
+call s:Highlight('DiffText',   s:palette.yellow, s:palette.darkpurple)
 
 " Language elements
 call s:Highlight('Boolean',         s:palette.yellow,     s:palette.none)
@@ -557,7 +557,7 @@ HiLink typescriptMathStaticMethod          typescriptGlobal
 "HiLink typescriptMathStaticProp            Cyan
 HiLink typescriptComment    Comment
 HiLink typescriptDocComment Comment
-HiLink typescriptDocTags    Title
+HiLink typescriptDocTags    Gray
 " }}}
 
 " TSX (Typescript + JSX) {{{
