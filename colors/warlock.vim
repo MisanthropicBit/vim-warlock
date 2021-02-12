@@ -808,9 +808,9 @@ call s:Highlight('ALEError',   s:palette.red,    s:palette.none, s:undercurl)
 call s:Highlight('ALEWarning', s:palette.orange, s:palette.none, s:undercurl)
 call s:Highlight('ALEInfo',    s:palette.blue,   s:palette.none, s:undercurl)
 
-HiLink ALEErrorSign       ALEError
-HiLink ALEWarningSign     ALEWarning
-HiLink ALEInfoSign        ALEInfo
+HiLink ALEErrorSign       Red
+HiLink ALEWarningSign     Orange
+HiLink ALEInfoSign        Blue
 HiLink ALEErrorSignLineNr Red
 " }}}
 
