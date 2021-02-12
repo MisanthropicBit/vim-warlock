@@ -220,7 +220,7 @@ HiLink qfLineNr   Cyan
 
 " Neovim/vim specific highlights
 if has('nvim')
-    call s:Highlight('NormalFloat', s:palette.none, s:palette.bg1)
+    call s:Highlight('NormalFloat', s:palette.none, s:palette.darkpurple)
     call s:Highlight('TermCursor', s:palette.none, s:palette.none, 'reverse')
     call s:Highlight('TermCursorNC', s:palette.purple, s:palette.none, 'reverse')
 else
