@@ -89,10 +89,6 @@ h1 {
   font-style: italic;
 }
 
-.author a {
-  color: #b5d5b5;
-}
-
 .colorrow {
   display: flex;
   flex-direction: row;
