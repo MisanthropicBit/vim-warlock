@@ -231,6 +231,9 @@ div.active > a {
   color: white;
   margin-bottom: -10px;
 }
+
+.centered-subtitle {
+  text-align: center;
   color: white;
 }
 
