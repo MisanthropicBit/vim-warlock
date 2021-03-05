@@ -392,8 +392,16 @@ HiLink perlPod Comment
 "HiLink podCmdText Yellow
 " }}}
 
-" JavaScript {{{
-
+" JavaScript (https://github.com/pangloss/vim-javascript) {{{
+HiLink jsGlobalNodeObjects Orange
+HiLink jsFunction Yellow
+HiLink jsObjectProp Keyword
+HiLink jsNull DarkRed
+HiLink jsUndefined DarkRed
+HiLink jsClassDefinition Identifier
+HiLink jsClassMethodType jsFunction
+HiLink jsClassPropertyComputed Pink
+HiLink jsPrototype LightGreen
 " }}}
 
 " JSX {{{
